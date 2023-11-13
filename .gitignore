@@ -11,3 +11,5 @@ CTestTestfile.cmake
 _deps
 *.DS_Store
 client/.vscode/
+client/build/
+server/build/
