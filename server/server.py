@@ -44,7 +44,7 @@ while True:
                     "TimeStamps": time.time(), # 时间戳
                     "Command": 7, # 命令的编号
                 })
-        if(decoded_data["Device"] == "Raspberry Pi"): # 树莓派
+        elif(decoded_data["Device"] == "Raspberry Pi"): # 树莓派
             RspState = decoded_data["State"]
             response = json.dumps({
                     "TimeStamps": time.time(), # 时间戳
@@ -53,7 +53,7 @@ while True:
         else: # 未知设备
             response = json.dumps({
                     "TimeStamps": time.time(), # 时间戳
-                    "Message": "Access Denied.", 
+                    "Command": "Access Denied.", 
                 })
 
         client_socket.send(response.encode())
